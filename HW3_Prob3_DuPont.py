@@ -10,7 +10,7 @@ def smiles(r, mood, x0 = 0.0, y0 = 0.0,  col = "Blue"):
     x = r * np.cos(theta)
     y = r * np.sin(theta)
     
-    
+    #Pack them them together and plot them as a part of the function
     plt.plot(x + x0, y + y0, color = col)
 
     ex1 =0.1 * r * np.cos(theta) + 0.25 * r
@@ -53,6 +53,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #smiles(r, mood, x0, y0, color)
-print(smiles(2, 'sad', 30, 7.25), smiles(22, 'happy', x0 = 30, y0 =  10, col = "r"))
-
+smiles(2, 'sad', 30, 7.25)
+smiles(22, 'happy', x0 = 30, y0 =  10, col = "r")
+plt.xlim(4,56)
+plt.ylim(-15, 36)
 plt.show()
